@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [恒大金服UI自动化测试项目报告]">
+  <parameter name="isDebug" value="true"/>
+  <parameter name="udid" value="127.0.0.1:62001"/>
+  <listeners>
+    <listener class-name="com.evergrande.publics.TestNGListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="注册登录(failed)">
+    <classes>
+      <class name="com.evergrande.TestCases.WeChatLogin">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="case1"/>
+          <include name="stup"/>
+        </methods>
+      </class> <!-- com.evergrande.TestCases.WeChatLogin -->
+    </classes>
+  </test> <!-- 注册登录(failed) -->
+</suite> <!-- Failed suite [恒大金服UI自动化测试项目报告] -->

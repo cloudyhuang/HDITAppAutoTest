@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="恒大信息化中心UI自动化测试项目报告" parallel="false" preserve-order="true">
+	<parameter name="udid" value="127.0.0.1:62001" />
+	<!--<parameter name="udid" value="192.168.56.101:5555" />-->
+	<parameter name="isDebug" value="true" />
+	
+	<test verbose="2" preserve-order="true" name="注册登录">
+		<classes>
+			<class name="com.evergrande.TestCases.WeChatLogin">
+			    <methods>
+					<include name="case1" />
+				</methods>
+			    
+			</class>
+		</classes>
+	</test>
+	<listeners>
+		<listener class-name="com.evergrande.publics.TestNGListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
+	</listeners>
+</suite> <!-- Suite -->

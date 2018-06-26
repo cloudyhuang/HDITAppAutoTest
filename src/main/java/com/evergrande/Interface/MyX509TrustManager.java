@@ -1,0 +1,34 @@
+package com.evergrande.Interface;
+
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+
+import javax.net.ssl.X509TrustManager;
+
+/**
+* @author huangxiao
+* @version 创建时间：2018年2月5日 下午2:15:36
+* 类说明
+*/
+public class MyX509TrustManager implements X509TrustManager{
+    /* (non-Javadoc)
+    * @see javax.net.ssl.X509TrustManager#checkClientTrusted(java.security.cert.X509Certificate[], java.lang.String)
+    */
+    public void checkClientTrusted(X509Certificate[] arg0, String arg1)
+            throws CertificateException {
+
+    }
+    /* (non-Javadoc)
+     * @see javax.net.ssl.X509TrustManager#checkServerTrusted(java.security.cert.X509Certificate[], java.lang.String)
+     */
+    public void checkServerTrusted(X509Certificate[] arg0, String arg1)
+            throws CertificateException {
+
+    }
+    /* (non-Javadoc)
+     * @see javax.net.ssl.X509TrustManager#getAcceptedIssuers()
+     */
+    public X509Certificate[] getAcceptedIssuers() {
+        return null;
+    }
+}
