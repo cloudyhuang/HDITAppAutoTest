@@ -1,12 +1,16 @@
 package com.evergrande.TestCases;
 
+import java.io.File;
+
+import org.apache.poi.ss.usermodel.Workbook;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.evergrande.TestBase.TestUnit;
 import com.evergrande.config.CommonAppiumTest;
+import com.evergrande.publics.ExcelUtil;
 import com.evergrande.service.AndroidXmlParseService;
 import com.evergrande.service.RunUnitService;
+import com.evergrande.testbase.TestUnit;
 
 
 public class WeChatLogin extends CommonAppiumTest{
@@ -15,7 +19,14 @@ public class WeChatLogin extends CommonAppiumTest{
 		
 	@BeforeTest
 	private void stup() throws Exception{
-		TestUnit testunit = AndroidXmlParseService.parse("src/test/java/TestCaseXml/WeChatLogin.xml");
+		ExcelUtil excelUtil =new ExcelUtil();
+		excelUtil.setFilePath("/Users/master/Desktop/测试用例.xlsx");
+		String xmlPath="src/test/java/TestCaseXml/HDLogin.xml";
+		Workbook workbook = excelUtil.initWorkBook();
+        if (workbook != null) {
+        	excelUtil.parseWorkbook(workbook,xmlPath);
+        }
+		TestUnit testunit = AndroidXmlParseService.parse(xmlPath);
 		testunit.setAndroidDriver(driver);
 		runService = new RunUnitService(testunit);
 		System.out.println("-----------------------------------【恒大金服登录流程的测试场景点】-----------------------------------");

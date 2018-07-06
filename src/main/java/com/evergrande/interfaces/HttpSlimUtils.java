@@ -1,4 +1,4 @@
-package com.evergrande.Interface;
+package com.evergrande.interfaces;
 
 import org.apache.http.*;
 import org.apache.http.client.entity.UrlEncodedFormEntity;

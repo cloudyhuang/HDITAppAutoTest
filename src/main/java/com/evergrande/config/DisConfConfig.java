@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 import org.json.JSONObject;
 import org.testng.Assert;
 
-import com.evergrande.Interface.GetOrderPushStatus;
+import com.evergrande.interfaces.GetOrderPushStatus;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 

@@ -1,4 +1,4 @@
-package com.evergrande.TestBase;
+package com.evergrande.testbase;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;

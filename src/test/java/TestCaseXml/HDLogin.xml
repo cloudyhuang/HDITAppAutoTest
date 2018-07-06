@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<unit id="HDAutoTest" desc="恒大金服测试场景点">
+  <case id="case1" name="验证恒大金服登录功能">
+    <step action="wait-Forced" value="5000" desc="强制等待5秒"/>
+    <step action="click-Ele" locator="resource-id=textView_gesture_switch_user" desc="点击切换账号按钮"/>
+    <step action="click-Ele" locator="resource-id=phone_view" desc="点击手机号输入框"/>
+    <step selfAction="com.evergrande.pages.SafeKeyBoard" selfMethodName="sendNum" selfMethodParameters="13007311222" desc="安全键盘输入"/>
+    <step selfAction="com.evergrande.pages.SafeKeyBoard" selfMethodName="pressFinishBtn" desc="安全键盘完成"/>
+    <step action="send-Keys" locator="resource-id=editText_captcha" value="h1h1" desc="验证码输入"/>
+    <step action="click-Ele" locator="resource-id=button_nextStep" desc="点击登录按钮"/>
+  </case>
+  <case id="case2">
+    <step action="send-Keys" locator="text=你的手机号码" value="XXX" desc="输入手机号码"/>
+    <step action="send-Keys" locator="resource-id=com.tencent.mm:id/g_" value="XXX" desc="输入密码"/>
+    <step action="click-Ele" locator="text=登录" desc="点击登录按钮"/>
+    <step action="android-check" locator="text=通讯录" expect="通讯录" desc="检查登录后显示界面"/>
+  </case>
+</unit>

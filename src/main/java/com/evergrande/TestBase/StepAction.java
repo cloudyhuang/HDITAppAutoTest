@@ -1,4 +1,4 @@
-package com.evergrande.TestBase;
+package com.evergrande.testbase;
 
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -546,9 +546,11 @@ public class StepAction {
     public void contextNativeApp(AndroidDriver<AndroidElement> driver){
     	Set<String> context = driver.getContextHandles();
         for(String contextname : context){
-        System.out.println(contextname);//打印
-	       if(contextname.contains("NATIVE"))
-	       driver.context(contextname);
+        System.out.println(contextname);	//打印
+	       if(contextname.contains("NATIVE")){
+	    	   driver.context(contextname);
+	       }
+	       
         }
     }
     public void contextWebview(AndroidDriver<AndroidElement> driver){

@@ -34,7 +34,7 @@ public class AnyproxyServer extends Thread{
 							System.out.println(line);
 						}
 					} catch (IOException e) {
-						// e.printStackTrace();
+						
 					}
 				}
 			}).start();
@@ -50,7 +50,6 @@ public class AnyproxyServer extends Thread{
 							outputStream.flush();
 						}
 					} catch (IOException e) {
-						// e.printStackTrace();
 					}
 				}
 			}).start();

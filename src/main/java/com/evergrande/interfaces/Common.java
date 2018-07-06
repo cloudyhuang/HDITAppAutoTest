@@ -1,4 +1,4 @@
-package com.evergrande.Interface;
+package com.evergrande.interfaces;
 
 import org.json.JSONException;
 import org.json.JSONObject;

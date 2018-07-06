@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 import org.json.JSONObject;
 
-import com.evergrande.Interface.GetOrderPushStatus;
+import com.evergrande.interfaces.GetOrderPushStatus;
 
 public class Util {
 	public static GetOrderPushStatus orderpushstatus = new GetOrderPushStatus();

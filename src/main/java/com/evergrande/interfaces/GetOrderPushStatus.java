@@ -1,4 +1,4 @@
-package com.evergrande.Interface;
+package com.evergrande.interfaces;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
