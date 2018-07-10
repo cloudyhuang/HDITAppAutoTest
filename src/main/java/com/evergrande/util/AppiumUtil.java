@@ -15,9 +15,8 @@ import com.evergrande.testbase.TestStep;
 /**
  * <br>公用函数功能</br>
  *
- * @author  102051
- * @email   mengxiw@dafycredit.com
- * @date    2017年7月27日 下午4:07:18
+ * @author  黄霄
+ * @date    2018年6月27日 下午4:07:18
  * @version 1.0
  * @since   1.0
  */
@@ -33,8 +32,8 @@ public class AppiumUtil {
 	 * 如果属性可以唯一确定要获取的元素，则可以省略[索引]，例子如下：<br/>
 	 * class=android.widget.TextView[1]
 	 *
-	 * @author    102051
-	 * @date      2017年7月26日 下午3:55:57
+	 * @author  黄霄
+	 * @date    2018年6月27日 下午4:07:18
 	 * @param step
 	 * @return
 	 * @throws Exception 
@@ -52,7 +51,6 @@ public class AppiumUtil {
 		   
 		   String locatename = loc.substring(0, idx1);
 		   String locatevalue = loc.substring(idx1+1,idx2);
-		   int locindex = Integer.valueOf(loc.substring(idx2+1,loc.length()-1));
 		   
 //		   System.err.println(locatename+"  "+locatevalue+" "+locindex);
 		   By locator=null;
@@ -79,8 +77,8 @@ public class AppiumUtil {
 	 * 当前假设包含多个EL表达式的字符串中，</br>
 	 * 每一个EL表达式对应的是localmap中的值为String类型的键值对
 	 *
-	 * @author    102051
-	 * @date      2017年8月2日 上午11:43:43
+	 * @author  黄霄
+	 * @date    2018年6月27日 下午4:07:18
 	 * @param str
 	 * @return
 	 * @throws Exception 
@@ -117,8 +115,8 @@ public class AppiumUtil {
 	 *<h1>List&lt;String></h1>
 	 *<h1>List&lt;Map&lt;String,Object>></h1></br>
 	 *
-	 * @author    102051
-	 * @date      2017年8月2日 下午2:43:54
+	 * @author  黄霄
+	 * @date    2018年6月27日 下午4:07:18
 	 * @param str
 	 * @return
 	 * @throws Exception 

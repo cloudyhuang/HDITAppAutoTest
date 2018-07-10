@@ -31,10 +31,12 @@ import io.appium.java_client.pagefactory.TimeOutDuration;
 
 public class CommonAppiumPage{
 	public AndroidDriver<AndroidElement> driver; 
-
-    private final int WAIT_TIME = 30;    //默认的等待控件时间
-    public final int KEYCODE_BACK=4;	//返回键
-    public final int KEYCODE_VOLUME_DOWN=25;	//音量下键
+	//默认的等待控件时间
+    private final int WAIT_TIME = 30;
+    //返回键
+    public final int KEYCODE_BACK=4;	
+    //音量下键
+    public final int KEYCODE_VOLUME_DOWN=25;	
    
     private TimeOutDuration timeOutDuration;
     public CommonAppiumPage(AndroidDriver<AndroidElement> driver) {

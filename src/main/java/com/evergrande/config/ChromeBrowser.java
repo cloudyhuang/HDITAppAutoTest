@@ -20,8 +20,10 @@ public class ChromeBrowser implements Runnable {
 
 	public void chromeGetUrl() {
 		DesiredCapabilities cap=DesiredCapabilities.chrome();
-		cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);	// 设置变量ACCEPT_SSL_CERTS的值为True  处理不安全链接
-		System.setProperty("webdriver.chrome.driver", "/Users/master/Documents/chromedriver"); // 此处PATH替换为你的chromedriver所在路径
+		// 设置变量ACCEPT_SSL_CERTS的值为True  处理不安全链接
+		cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);	
+		// 此处PATH替换为你的chromedriver所在路径
+		System.setProperty("webdriver.chrome.driver", "/Users/master/Documents/chromedriver"); 
 		WebDriver webDriver = new ChromeDriver();
 		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		webDriver.get("https://www.tripadvisor.cn");

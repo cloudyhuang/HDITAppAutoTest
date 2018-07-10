@@ -80,23 +80,22 @@ public class CommonAppiumTest {
 		System.out.println("---- Appium server started Successfully ! ----");
 		try{Thread.sleep(15000);}catch(Exception e){}
         File appDir = new File(classpathRoot, "app");
-        File app = new File(appDir, "app2.4.apk");
+        File app = new File(appDir, "Android工程管理V2.7.2_20180502_1533.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, udid); 
         //capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability("appPackage", "com.evergrande.eif.android.hengjiaosuo");
+        capabilities.setCapability("appPackage", "com.evergrande.hdproject");
         capabilities.setCapability("unicodeKeyboard", true);	//支持中文
         capabilities.setCapability("resetKeyboard", true);	//运行完毕之后，变回系统的输入法
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,"600");
         //capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);		//uiautomator2支持toast
-        //capabilities.setCapability(MobileCapabilityType.APP_WAIT_ACTIVITY, "com.evergrande.eif.userInterface.activity.modules.guide.*");
-        capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, "com.evergrande.eif.userInterface.activity.modules.*");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, "com.evergrande.roomacceptance.*");
         if(isDebug){capabilities.setCapability("noReset", true);}	//是否不重新安装 true不安装，false重新安装
         else {capabilities.setCapability("noReset", true);	}//是否不重新安装 true不安装，false重新安装
         //关键是加上这段
         ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("androidProcess", "com.evergrande.eif.android.hengjiaosuo:web");
+        options.setExperimentalOption("androidProcess", "com.evergrande.hdproject:web");
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         capabilities.setCapability("recreateChromeDriverSessions", true);//当移除非 ChromeDriver webview时，终止掉 ChromeDriver 的 session
         driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);

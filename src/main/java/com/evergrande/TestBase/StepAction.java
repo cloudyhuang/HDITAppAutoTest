@@ -122,6 +122,23 @@ public class StepAction {
         return false;
     }
     /**
+     * 检查预期元素是否出现
+     *
+     * @param TestStep
+     * @return 断言是否存在元素
+     */
+    public boolean androidCheck(TestStep step) throws Exception{
+    	if (step.getLocator() != null) {
+        	By locator=AppiumUtil.getElementLocator(step);
+            boolean flag=this.isElementExsit(locator);
+            Assert.assertEquals(flag, true,step.getExpect());
+            return flag;
+        } else {
+            print(step.getDesc() + "为空，点击错误");
+        }
+        return false;
+	}
+    /**
      * Click点击webview控件
      *
      * @param by  web控件locator
@@ -627,17 +644,17 @@ public class StepAction {
 		waitAuto(WAIT_TIME);
 		return ele;
 	}
-	public boolean isElementExsit(AndroidDriver<AndroidElement> driver, By locator) {  
-        boolean flag = false;  
-        try {  
-        	AndroidElement element=driver.findElement(locator);  
-            flag=null!=element;  
-        } catch (NoSuchElementException e) {  
-            System.out.println("Element:" + locator.toString()  
-                    + " is not exsit!");  
-        }  
-        return flag;  
-    } 
+//	public boolean isElementExsit(AndroidDriver<AndroidElement> driver, By locator) {  
+//        boolean flag = false;  
+//        try {  
+//        	AndroidElement element=driver.findElement(locator);  
+//            flag=null!=element;  
+//        } catch (NoSuchElementException e) {  
+//            System.out.println("Element:" + locator.toString()  
+//                    + " is not exsit!");  
+//        }  
+//        return flag;  
+//    } 
 /**
   * times秒内判断元素是否存在
   *
@@ -806,7 +823,6 @@ public class StepAction {
 		try {
 			Thread.sleep(timeout);
     	   } catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
     	   }
 	}

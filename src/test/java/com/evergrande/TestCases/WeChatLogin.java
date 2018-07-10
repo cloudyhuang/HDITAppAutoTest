@@ -20,7 +20,7 @@ public class WeChatLogin extends CommonAppiumTest{
 	@BeforeTest
 	private void stup() throws Exception{
 		ExcelUtil excelUtil =new ExcelUtil();
-		excelUtil.setFilePath("/Users/master/Desktop/测试用例.xlsx");
+		excelUtil.setFilePath("src/test/java/TestCaseXml/测试用例.xlsx");
 		String xmlPath="src/test/java/TestCaseXml/HDLogin.xml";
 		Workbook workbook = excelUtil.initWorkBook();
         if (workbook != null) {
@@ -29,7 +29,7 @@ public class WeChatLogin extends CommonAppiumTest{
 		TestUnit testunit = AndroidXmlParseService.parse(xmlPath);
 		testunit.setAndroidDriver(driver);
 		runService = new RunUnitService(testunit);
-		System.out.println("-----------------------------------【恒大金服登录流程的测试场景点】-----------------------------------");
+		System.out.println("-----------------------------------【恒大地产信息化登录流程的测试场景点】-----------------------------------");
 	}
 	
 	@Test

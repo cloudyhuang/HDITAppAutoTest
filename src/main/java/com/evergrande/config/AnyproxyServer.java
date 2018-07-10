@@ -18,8 +18,8 @@ public class AnyproxyServer extends Thread{
 	
 	public void startServer() {
 		try {
-			Process process = Runtime.getRuntime().exec("anyproxy --intercept --rule /usr/local/lib/node_modules/anyproxy/rule_sample/rule_log.js"); // adb
-																		// shell
+			// anyproxy 命令行启动
+			Process process = Runtime.getRuntime().exec("anyproxy --intercept --rule /usr/local/lib/node_modules/anyproxy/rule_sample/rule_log.js"); 
 			final BufferedWriter outputStream = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
 			final BufferedReader inputStream = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			// 这里一定要注意错误流的读取，不然很容易阻塞，得不到你想要的结果，

@@ -11,19 +11,48 @@ import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
+import org.jsoup.helper.StringUtil;
+import org.openqa.selenium.By;
 
 import com.evergrande.testbase.TestCase;
+import com.evergrande.testbase.TestStep;
 
 public class test {
 	public static void main(String[] args) throws Exception {
-		ExcelUtil excelUtil =new ExcelUtil();
-		excelUtil.setFilePath("/Users/master/Desktop/测试用例.xlsx");
-		String xmlPath="src/test/java/TestCaseXml/HDLogin.xml";
-		Workbook workbook = excelUtil.initWorkBook();
-        if (workbook != null) {
-        	excelUtil.parseWorkbook(workbook,xmlPath);
-        }
-        //CreateXMLByDOM4J(new File("/Users/master/Desktop/hehe.xml"));
+		getElementLocator("xpath=//android.widget.TextView[@text='形象进度管理']");
+	}
+	public static By getElementLocator(String loc) throws Exception{
+		   if(StringUtil.isBlank(loc)) 
+			   throw new Exception("当前步骤未定位到任何控件元素！");
+		   //如果没有索引，则加上索引0
+		   if(loc.lastIndexOf("[") < 0)  loc = loc+"[0]";
+		   
+		   int idx1 = loc.indexOf("=") , idx2 = loc.lastIndexOf("[");
+		   if(idx1 == -1 || idx2 == -1 || idx2 < idx1) 
+			   throw new Exception("step元素locator属性格式有误！");
+		   
+		   String locatename = loc.substring(0, idx1);
+		   String locatevalue = loc.substring(idx1+1,idx2);
+		   String locindex = loc.substring(idx2+1,loc.length()-1);
+		   
+		   System.out.println(locatename+"  "+locatevalue+" "+locindex);
+		   By locator=null;
+
+		   switch(locatename){
+		   		case "resource-id": 
+		   			locator = By.id(locatevalue);
+		   			break;
+		   		case "class": 
+		   			locator = By.className(locatevalue);
+		   			break;
+		   		case "xpath": 
+		   			locator = By.xpath(locatevalue);
+		   			break;
+		   		default:
+		   			throw new Exception("step元素locator属性配置有误，'='之前必须为resource-id、calss、xpath之一！");
+		   }
+		   
+	       return locator==null?null:locator;
 	}
 	public static void CreateXMLByDOM4J(File dest) {
         // 创建Document对象
