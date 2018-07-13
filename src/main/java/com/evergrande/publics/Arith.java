@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
 * @author huangxiao
 * @version 创建时间：2018年1月19日 下午5:21:49
-* 类说明
+* 大数据的精确数学计算
 */
 public class Arith {
 	// 源文件Arith.java：  

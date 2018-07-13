@@ -27,7 +27,7 @@ import org.json.JSONObject;
 /**
 * @author huangxiao
 * @version 创建时间：2017年8月31日 上午10:13:32
-* 类说明
+* jenkins构建操作
 */
 public class JenkinsJob {
 	//jenkins登录账号
