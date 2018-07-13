@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [恒大信息化中心UI自动化测试项目报告]">
   <parameter name="isDebug" value="true"/>
+  <parameter name="packageName" value="com.evergrande.hdproject"/>
   <parameter name="udid" value="127.0.0.1:62001"/>
   <listeners>
     <listener class-name="com.evergrande.publics.TestNGListener"/>
@@ -15,7 +16,7 @@
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
-          <include name="case1"/>
+          <include name="allTest"/>
           <include name="stup"/>
         </methods>
       </class> <!-- com.evergrande.TestCases.WeChatLogin -->

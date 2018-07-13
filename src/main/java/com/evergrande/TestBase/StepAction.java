@@ -42,6 +42,7 @@ public class StepAction {
 	public AndroidDriver<AndroidElement> driver; 
 
     private final int WAIT_TIME = 30;    //默认的等待控件时间
+    private final int WAIT_ELE_UNVISIBLE_TIME=500;	//等待元素消失最多等待的时间
     public final int KEYCODE_BACK=4;	//返回键
     public final int KEYCODE_VOLUME_DOWN=25;	//音量下键
    
@@ -122,6 +123,29 @@ public class StepAction {
         return false;
     }
     /**
+     * Click点击控件,如果控件存在
+     *
+     * @param TestStep
+     * @return 返回是否存在控件
+     * @throws Exception 
+     */
+    public void clickIfExistEle(TestStep step) throws Exception {
+        if (step.getLocator() != null) {
+        	By locator=AppiumUtil.getElementLocator(step);
+            	if(this.isElementExsit(5, locator)){
+            		this.waitForClickble(locator, WAIT_TIME);
+                	findBy(locator).click();
+            	}
+            	else {
+            		System.out.println(step.getDesc()+"5s内不存在，无需点击");
+            		
+            	}
+        } else {
+            print(step.getDesc() + "为空，点击错误");
+        }
+       
+    }
+    /**
      * 检查预期元素是否出现
      *
      * @param TestStep
@@ -137,6 +161,26 @@ public class StepAction {
             print(step.getDesc() + "为空，点击错误");
         }
         return false;
+	}
+    /**
+     * 500s内等待元素消失
+     *
+     * @param step 测试步骤
+     * @throws Exception 
+     */
+    public void waitEleUnVisible(TestStep step) throws Exception{ 
+		waitAuto(1);
+		By locator=AppiumUtil.getElementLocator(step);
+        for (int attempt = 0; attempt < WAIT_ELE_UNVISIBLE_TIME; attempt++) {  
+            try {  
+                driver.findElement(locator);  
+                this.threadSleep(1000);
+            } catch (Exception e) {  
+            	waitAuto(WAIT_TIME);
+                break; 
+            }  
+        }  
+        waitAuto(WAIT_TIME);
 	}
     /**
      * Click点击webview控件
@@ -205,6 +249,7 @@ public class StepAction {
         	}
         }
     }
+    
     /**
      * 往安全键盘输入字符串
      *

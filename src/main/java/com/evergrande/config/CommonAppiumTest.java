@@ -43,8 +43,8 @@ public class CommonAppiumTest {
     private WebDriverWait wait;
     AppiumServer appiumServer;
     @BeforeSuite(alwaysRun = true)
-    @Parameters({"udid","isDebug"})
-    public void setUp(String udid,boolean isDebug) throws Exception {
+    @Parameters({"udid","isDebug","packageName"})
+    public void setUp(String udid,boolean isDebug,String packageName) throws Exception {
     	if(isDebug){}
     	else {
 //    		ChromeBrowser cb = new ChromeBrowser();  
@@ -85,7 +85,7 @@ public class CommonAppiumTest {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, udid); 
         //capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability("appPackage", "com.evergrande.hdproject");
+        capabilities.setCapability("appPackage", packageName);
         capabilities.setCapability("unicodeKeyboard", true);	//支持中文
         capabilities.setCapability("resetKeyboard", true);	//运行完毕之后，变回系统的输入法
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,"600");

@@ -1,6 +1,7 @@
 package com.evergrande.TestCases;
 
 import java.io.File;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Workbook;
 import org.testng.annotations.BeforeTest;
@@ -10,6 +11,7 @@ import com.evergrande.config.CommonAppiumTest;
 import com.evergrande.publics.ExcelUtil;
 import com.evergrande.service.AndroidXmlParseService;
 import com.evergrande.service.RunUnitService;
+import com.evergrande.testbase.TestCase;
 import com.evergrande.testbase.TestUnit;
 
 
@@ -33,9 +35,14 @@ public class WeChatLogin extends CommonAppiumTest{
 	}
 	
 	@Test
-	public void case1() throws Throwable{
-		runService.runCase("case1");
-		runService.TestReportRemarks("验证在Android系统中，首次启动恒大金服APP，点击登录按钮后，可以正常进入登录界面");
+	public void allTest() throws Throwable{
+		for(Map.Entry<String,TestCase> e : runService.getTestunit().getCaseMap().entrySet()){
+			String caseId=e.getValue().getId();
+			String caseName=e.getValue().getName();
+			runService.runCase(caseId); 
+			runService.TestReportRemarks(caseName);
+			System.out.println(caseId+caseName+"---执行完毕");
+        }
 	}
 
 

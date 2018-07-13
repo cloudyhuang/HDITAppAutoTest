@@ -132,12 +132,8 @@ public class ExcelUtil {
 					}
 					this.lastCaseId = cellString;
 				}
-				else if(key.equals("name")){
-					if(testUnit.element("case").attributeValue("name")==null){
-						// // 如果case节点的name属性为空
-						testCase.addAttribute(key, cellString);
-					}
-					
+				else if (key.equals("name")) {
+					testCase.addAttribute(key, cellString);
 				}
 				else if(key.equals("step")){
 					// 创建step子节点

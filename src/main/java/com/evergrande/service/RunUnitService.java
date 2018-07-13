@@ -35,7 +35,12 @@ public class RunUnitService {
 		this.testunit = testunit;
 	}
 	
-    /**
+    public TestUnit getTestunit() {
+		return testunit;
+	}
+
+
+	/**
      * <br>根据索引从TestUnit中获取测试用例</br>
      *
      * @param index

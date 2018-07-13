@@ -87,8 +87,14 @@ public class AndroidXmlParseService {
 				
 				if (caseMap.containsKey(testCase.getId()))
 					throw new RuntimeException("存在多个" + testCase.getId() + "，请检查id配置");
-				else
-					caseMap.put(testCase.getId(), testCase);
+				else{
+					if(!testCase.getId().contains("//")){
+						//caseId若包含//表示这条用例被注释了
+						caseMap.put(testCase.getId(), testCase);
+					}
+					
+				}
+					
 			}
 			
 			testUnit = new TestUnit();

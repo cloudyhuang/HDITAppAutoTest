@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.evergrande.publics.TestNGHello">
+      <class name="com.evergrande.TestCases.WeChatLogin">
         <methods>
-          <include name="searchByInstOrderNo"/>
+          <include name="tearDown"/>
+          <include name="afterMethod"/>
+          <include name="allTest"/>
         </methods>
-      </class> <!-- com.evergrande.publics.TestNGHello -->
+      </class> <!-- com.evergrande.TestCases.WeChatLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

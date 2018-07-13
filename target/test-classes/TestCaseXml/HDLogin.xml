@@ -7,4 +7,19 @@
     <step action="click-Ele" locator="resource-id=commit" desc="点击登录"/>
     <step action="android-Check" locator="xpath=//android.widget.TextView[@text='形象进度管理']" expect="预期出现形象进度管理按钮" desc="检查登录后显示界面"/>
   </case>
+  <case id="case2" name="首次进入形象工程同步数据">
+    <step action="click-Ele" locator="xpath=//android.widget.TextView[@text='形象进度管理']" desc="点击进入形象进度管理"/>
+    <step action="click-IfExistEle" locator="resource-id=positiveButton" desc="点击立即同步"/>
+  </case>
+  <case id="case3" name="楼栋列表">
+    <step action="click-Ele" locator="xpath=//android.widget.RadioButton[@text='形象进度']" desc="点击形象进度页签"/>
+    <step selfAction="com.evergrande.pages.ImageProjectListPageObject" selfMethodName="chooseProject" selfMethodParameters="南京恒大名都0322" desc="进入一个形象工程"/>
+    <step action="click-Ele" locator="resource-id=btnEdit" desc="点击录入形象工程按钮"/>
+    <step action="click-Ele" locator="xpath=//android.widget.TextView[@resource-id='com.evergrande.hdproject:id/tv_tab' and @text='形象进度']" desc="点击形象进度标签"/>
+    <step action="click-Ele" locator="resource-id=custom_spinner" desc="点击选择楼栋"/>
+    <step selfAction="com.evergrande.pages.ImageProgressPageObject" selfMethodName="chooseBuilding" selfMethodParameters="一期;一期园建工程" desc="选择楼栋"/>
+  </case>
+  <case id="//case4" name="拍照（多张照片）">
+    <step action="click-Ele" locator="resource-id=btnTakePhoto" desc="点击拍照按钮"/>
+  </case>
 </unit>

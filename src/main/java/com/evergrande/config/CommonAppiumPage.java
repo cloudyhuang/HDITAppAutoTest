@@ -89,6 +89,32 @@ public class CommonAppiumPage{
         return false;
     }
     /**
+     * Click点击控件,通过By
+     *
+     * @param locator  By元素定位
+     * @param str 控件的文字描述，供错误时候输出
+     * @return 返回是否存在控件
+     */
+    public boolean clickEle(By locator, String str) {
+        if (locator != null) {
+            try{
+            	this.waitForClickble(locator, WAIT_TIME);
+            	findBy(locator).click();
+            }
+        	catch(NoSuchElementException e){
+        		assertTrue("没有找到目标元素－－"+str,false);
+        	}
+            catch(TimeoutException e){
+        		assertTrue("超时"+WAIT_TIME+"秒，元素\""+str+"\"为不可点击状态！",false);
+        	}
+            CommonAppiumTest.logReader.readLog();
+            return true;
+        } else {
+            print(str + "为空，点击错误");
+        }
+        return false;
+    }
+    /**
      * Click点击webview控件
      *
      * @param by  web控件locator
