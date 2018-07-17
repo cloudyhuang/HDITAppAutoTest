@@ -22,4 +22,19 @@
   <case id="//case4" name="拍照（多张照片）">
     <step action="click-Ele" locator="resource-id=btnTakePhoto" desc="点击拍照按钮"/>
   </case>
+  <case id="case5" name="工序">
+    <step action="click-Ele" locator="resource-id=etProStr"/>
+    <step selfAction="com.evergrande.pages.ImageProgressPageObject" selfMethodName="chooseProcedure" selfMethodParameters="主体(层)" desc="选择工序"/>
+  </case>
+  <case id="case6" name="进度描述">
+    <step action="send-Keys" locator="resource-id=etPro" value="3" desc="输入进度"/>
+    <step action="send-Keys" locator="resource-id=etProDes" value="这是进度描述" desc="输入进度描述"/>
+  </case>
+  <case id="case7" name="状态变化（待完善--&gt;已维护）">
+    <step selfAction="com.evergrande.pages.ImageProgressPageObject" selfMethodName="sendConstructionStages" desc="输入工序"/>
+    <step action="click-Ele" locator="resource-id=iv_upload" desc="点击上传·提交按钮"/>
+    <step action="click-Ele" locator="resource-id=negativeButton" desc="点击上传按钮"/>
+    <step action="click-Ele" locator="resource-id=iv_upload" desc="点击上传·提交按钮"/>
+    <step action="click-Ele" locator="resource-id=positiveButton" desc="点击提交按钮"/>
+  </case>
 </unit>
