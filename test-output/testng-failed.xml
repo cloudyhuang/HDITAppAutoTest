@@ -17,7 +17,6 @@
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="allTest"/>
-          <include name="stup"/>
         </methods>
       </class> <!-- com.evergrande.TestCases.WeChatLogin -->
     </classes>

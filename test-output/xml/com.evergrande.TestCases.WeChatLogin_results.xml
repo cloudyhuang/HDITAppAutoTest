@@ -1,13 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="注册登录"
-           tests="1"
-           failures="0"
+           tests="4"
+           failures="2"
            errors="0"
-           skipped="0"
-           time="271.791">
+           skipped="2"
+           time="0.001">
   <properties />
+            <testcase name="setUp" time="0.000" classname="com.evergrande.TestCases.WeChatLogin">
+                <failure type="org.openqa.selenium.WebDriverException"
+                  message="Connection refused
+Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
+System info: host: &apos;bogon&apos;, ip: &apos;fe80:0:0:0:1883:18ed:b50b:6b40%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: AndroidDriver"
+              >
+<![CDATA[org.openqa.selenium.WebDriverException: Connection refused
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'bogon', ip: 'fe80:0:0:0:1883:18ed:b50b:6b40%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_51'
+Driver info: driver.version: AndroidDriver
+  io.appium.java_client.remote.AppiumCommandExecutor.lambda$2(AppiumCommandExecutor.java:101)
+  io.appium.java_client.remote.AppiumCommandExecutor$$Lambda$86/1265900909.get(Unknown Source)
+  java.util.Optional.orElseGet(Optional.java:267)
+  io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:100)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+  io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+  io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:255)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:138)
+  io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:87)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:111)
+  io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:72)
+  com.evergrande.config.CommonAppiumTest.setUp(CommonAppiumTest.java:101)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:497)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+  org.testng.SuiteRunner.run(SuiteRunner.java:254)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+  org.testng.TestNG.run(TestNG.java:1057)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: java.net.ConnectException: Connection refused
+  java.net.PlainSocketImpl.socketConnect(Native Method)
+  java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+  java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+  java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+  java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+  java.net.Socket.connect(Socket.java:589)
+  org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+  org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+  org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+  org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+  org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+  org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+  org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+  org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+  org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+  org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+  org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+  org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:139)
+  org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:87)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:337)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:136)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+  io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+  io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+  io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:255)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:138)
+  io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:87)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:111)
+  io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:72)
+  com.evergrande.config.CommonAppiumTest.setUp(CommonAppiumTest.java:101)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:497)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+  org.testng.SuiteRunner.run(SuiteRunner.java:254)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+  org.testng.TestNG.run(TestNG.java:1057)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="tearDown" time="0.000" classname="com.evergrande.TestCases.WeChatLogin">
+                <failure type="java.lang.NullPointerException"
+                  message="(null)"
+              >
+<![CDATA[java.lang.NullPointerException
+  com.evergrande.config.CommonAppiumTest.tearDown(CommonAppiumTest.java:262)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:497)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:322)
+  org.testng.SuiteRunner.run(SuiteRunner.java:254)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+  org.testng.TestNG.run(TestNG.java:1057)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="stup" time="0.0" classname="com.evergrande.TestCases.WeChatLogin">
+          <skipped />
+    </testcase>
+            <testcase name="allTest" time="0.0" classname="com.evergrande.TestCases.WeChatLogin">
+          <skipped />
+    </testcase>
   
   
-            <testcase name="allTest" time="271.791" classname="com.evergrande.TestCases.WeChatLogin" />
-      
 </testsuite>

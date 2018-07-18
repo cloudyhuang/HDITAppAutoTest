@@ -12,15 +12,201 @@
 <body>
 <h1>注册登录</h1>
 <p>
-  测试耗时: 311.732s
+  测试耗时: 0.002s
 </p>
 
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">com.evergrande.TestCases.WeChatLogin</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"127.0.0.1:62001", true, "com.evergrande.hdproject"</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.WebDriverException: Connection refused<br/>
+Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;<br/>
+System info: host: &apos;bogon&apos;, ip: &apos;fe80:0:0:0:1883:18ed:b50b:6b40%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_51&apos;<br/>
+Driver info: driver.version: AndroidDriver</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              io.appium.java_client.remote.AppiumCommandExecutor.lambda$2(AppiumCommandExecutor.java:101)<br />
+              io.appium.java_client.remote.AppiumCommandExecutor$$Lambda$86/1265900909.get(Unknown Source)<br />
+              java.util.Optional.orElseGet(Optional.java:267)<br />
+              io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:100)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)<br />
+              io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+              io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:255)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:138)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)<br />
+              io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:87)<br />
+              io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:111)<br />
+              io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:72)<br />
+              com.evergrande.config.CommonAppiumTest.setUp(CommonAppiumTest.java:101)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:497)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:254)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1149)<br />
+              org.testng.TestNG.run(TestNG.java:1057)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">java.net.ConnectException: Connection refused</a><br />
+        <div class="stackTrace" id="exception-1">
+                      java.net.PlainSocketImpl.socketConnect(Native Method)<br />
+                      java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)<br />
+                      java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)<br />
+                      java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)<br />
+                      java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)<br />
+                      java.net.Socket.connect(Socket.java:589)<br />
+                      org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)<br />
+                      org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)<br />
+                      org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)<br />
+                      org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)<br />
+                      org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)<br />
+                      org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)<br />
+                      org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)<br />
+                      org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)<br />
+                      org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)<br />
+                      org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)<br />
+                      org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)<br />
+                      org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:139)<br />
+                      org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:87)<br />
+                      org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:337)<br />
+                      org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:136)<br />
+                      org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)<br />
+                      io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)<br />
+                      io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:255)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:138)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)<br />
+                      io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:87)<br />
+                      io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:111)<br />
+                      io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:72)<br />
+                      com.evergrande.config.CommonAppiumTest.setUp(CommonAppiumTest.java:101)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:497)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
+                      org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:254)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1149)<br />
+                      org.testng.TestNG.run(TestNG.java:1057)<br />
+                      org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+                      org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br />
+                      org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br />
+                  </div>
+          </div>
+      </td>
+  <td class="screenshot">
+              </td>
+    <td class="apiLogInfo">
+                    </td>
+</tr>
+<tr>
+  <td class="method">
+                  tearDown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              com.evergrande.config.CommonAppiumTest.tearDown(CommonAppiumTest.java:262)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:497)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:322)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:254)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1149)<br />
+              org.testng.TestNG.run(TestNG.java:1057)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br />
+                </div>
+      </td>
+  <td class="screenshot">
+              </td>
+    <td class="apiLogInfo">
+                    </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">com.evergrande.TestCases.WeChatLogin</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  stup
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+    <td class="apiLogInfo">
+                    </td>
+</tr>
+            </table>
 
 
 
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">通过的测试</th></tr>
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">跳过的测试</th></tr>
           <tr>
         <td colspan="3" class="group">com.evergrande.TestCases.WeChatLogin</td>
       </tr>
@@ -30,18 +216,14 @@
                   allTest
       </td>
   <td class="duration">
-    271.791s
+    0.001s
   </td>
   <td class="result">
-        
+                               
     
             <div class="testOutput">
-                                    工程管理登录功能<br />
-                                                      首次进入形象工程同步数据<br />
-                                                      楼栋列表<br />
-                                                      工序<br />
-                                                      进度描述<br />
-                                                      状态变化（待完善--&gt;已维护）<br />
+                                    用例失败时间：2018-07-18 08:57:22<br />
+                                                      <br />
                             </div>
     
 
@@ -49,25 +231,18 @@
   <td class="screenshot">
                       <div class="screenshotimage">
                                                      
-                                                                                           
-                                                                                           
-                                                                                           
-                                                                                           
-                                                                                           
+                                                                                                                <img src='WeChatLogin.allTest20180718085657.png' onclick='window.open("WeChatLogin.allTest20180718085657.png")'' hight='100' width='100'/><br />
                                                               </div>
         </td>
     <td class="apiLogInfo">
                             <div class="apiLogInfo">
                                                                                         
                                                                                                                                     
-                                                                                                                                    
-                                                                                                                                    
-                                                                                                                                    
-                                                                                                                                    
                                                                         </div>
             </td>
 </tr>
       </table>
+
   
 </body>
 </html>
